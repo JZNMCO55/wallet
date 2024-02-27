@@ -1,0 +1,296 @@
+.container {
+  width: 357px;
+  height: 600px;
+  background-color: rgba(52, 52, 52, 1);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.div_header {
+  width: 357px;
+  height: 100px;
+  text-align: center;
+}
+
+.ul_step {
+  counter-reset: step;
+  display: flex;
+  height: 60px;
+  padding: 0;
+  justify-content: space-between;
+  margin: 20px auto;
+  list-style: none;
+}
+
+.ul_step li {
+  font-size: 12px;
+  /* 修改为px单位 */
+  line-height: 140%;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 2;
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+/* 添加伪元素表示步骤项之间的进度条 */
+.ul_step li::before {
+  width: 30px;
+  height: 30px;
+  content: counter(step);
+  counter-increment: step;
+  line-height: 30px;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+/* 添加伪元素表示当前页面的进度 */
+.ul_step li:not(:first-child)::after {
+  width: calc(100% - 34px);
+  height: 2px;
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: calc(-50% + 17px);
+  background-color: white;
+  /* 添加进度条颜色 */
+}
+
+.ul_step li.active{
+  color:rgba(3, 118, 201, 1)
+}
+
+.ul_step li.active::before{
+  border-color: rgba(3, 118, 201, 1);
+}
+
+.ul_step li.active::after{
+  background-color: rgba(3, 118, 201, 1);
+}
+
+.div_content {
+  width: 357px;
+  height: 536px;
+  text-align: center;
+  justify-content: center;
+}
+
+.h2_title{
+  font-weight: bold;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  height: 40px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 1);;
+}
+
+.h4_description{
+  height: auto;
+  width: 340px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 1);
+  margin: 10px auto;
+}
+
+.div_password{
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.form_password{
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.div_newPassword{
+  width: 300px;
+  height: auto;
+  text-align: center;
+}
+
+.div_password_description{
+  width: 300px;
+  text-align: left;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 10px;
+}
+
+.p_errorMessage{
+  text-align: left;
+  font-size: 12px;
+  margin: 0 auto;
+  color: red
+}
+
+.input_Password{
+  padding: 5px;
+  width: 300px;
+  font-size: 24px;
+  height: 40px;
+  outline: none;
+  border: solid rgba(255, 255, 255, 1);
+  background-color: unset;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  text-align: left;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.input_Password:focus{
+  border-color: rgba(3, 118, 201, 1);
+}
+
+.div_statement{
+  height: 20px;
+  width: 300px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  position: relative;
+  text-align: left;
+  align-items: center;
+  font-size: 14px;
+  list-style-type: none;
+  color: white;
+  display: flex;
+}
+
+.input_checkbox{
+  margin-left: 10px;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.h5_statement{
+  text-align: left;
+  height: 15px;
+  font-size: 14px;
+}
+
+.button_general{
+  margin: 0 auto;
+  height: 40px;
+  width: 250px;
+  border: 1px;
+  padding: 10px 8px;
+  background-color: rgba(3, 118, 201, 1);
+  border-radius: 100px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.button_general:disabled{
+    background-color: rgba(3, 118, 201, 0.5);
+    cursor: not-allowed;
+    pointer-events: none;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.div_promption{
+  margin: 0 auto;
+  height: 125px;
+  width: 254px;
+}
+
+.h4_promption{
+  padding-left: 25px;
+  margin: 0 auto;
+  text-align: left;
+  width: 254px;
+  font-size: 18px;
+  font-weight: 700;
+  height: 26px;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.ul_promption{
+  list-style: disc;
+  text-align: left;
+}
+
+.li_promption{
+  height: 26px;
+  width: 254px;
+  font-size: 16px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  list-style-type: disc;
+}
+
+.div_phrase{
+  padding: 10px 10px;
+  margin: 0 10px;
+  margin-bottom: 4px;
+  position: relative;
+  width: auto;
+  height: 200px;
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  border-radius: 6px;
+  border: solid rgba(255, 255, 255, 0.5);
+  justify-items: center;
+  /* 水平方向上居中对齐 */
+  align-items: center;
+  /* 垂直方向上居中对齐 */
+}
+
+.input_word {
+  position: relative;
+  border-radius: 10px;
+  border: solid rgba(255, 255, 255, 0.5);
+  background-color: unset;
+  margin: 2px;
+  display: flex;
+  outline: none;
+  text-align: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  width: 90px;
+  /* 计算输入框的宽度，减去间距后平分容器的宽度 */
+  height: 30px;
+}
+
+.input_word::placeholder {
+  color: rgba(255, 255, 255, 1);
+}
+
+.input_word::before {
+  content: attr(data-index);
+  position: absolute;
+  left: -20px;
+  /* 调整数字的位置 */
+  color: rgba(255, 255, 255, 1);
+}
+
+.div_nextStep{
+  text-align: center;
+}
+
+.div_confirm{
+  text-align: center;
+  margin-top: 50px;
+}
+

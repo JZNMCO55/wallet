@@ -1,0 +1,25 @@
+{
+  "name": "Orange-Mate",
+  "version": "0.0.1",
+  "description": "一个web3钱包的项目小练习",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run prep",
+    "prep": "npm run exp && node out.js",
+    "exp": "next build && next export",
+    "run": "next start",
+    "dev": "next dev"
+  },
+  "keywords": [],
+  "author": "橘子柠檬橙o",
+  "license": "ISC",
+  "dependencies": {
+    "bip39": "^3.1.0",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.10.0",
+    "glob": "^10.2.3",
+    "next": "^13.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

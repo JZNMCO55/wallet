@@ -1,0 +1,314 @@
+.container {
+  width: 357px;
+  height: 600px;
+  background-color: rgba(52, 52, 52 , 1);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* 头部 */
+.div_header {
+  width: 357px;
+  height: 64px;
+  display: flex;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 10px rgba(40, 40, 40, 1);
+  /* 0px 水平偏移，5px 垂直偏移，10px 模糊半径，颜色值 */
+}
+
+.div_headerContent{
+  align-items: center;
+  column-gap: 8px;
+  display: flex;
+  padding: 8px;
+  font-size: 16px;
+  height: 64px;
+  width: 357px;
+  vertical-align: baseline;
+}
+
+.div_select_network {
+  display: block;
+  width: 110px;
+  height: 32px;
+  line-height: 32px;
+  width: 100%;
+}
+
+.button_network{
+  box-sizing: border-box;
+  border-style: none;
+  width: 110px;
+  height: 32px;
+  line-height: 32px;
+  background-color: rgba(30, 30, 30, 1);
+  color: rgba(255, 255, 255, 1);
+  border-radius: 9999px;
+  padding-left: 8px;
+  padding-right: 16px;
+  padding-block: 1px;
+  padding-inline: 6px;
+  border-width: 2px;
+  display:flex;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button_network:active{
+  background-color: rgba(60, 60, 60, 1);
+}
+
+.network_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.div_firstLetter {
+  padding-top: 2px;
+  margin-top: 5px;
+  border-style: solid;
+  border-width: 1px;
+  line-height: 16px;
+  height: 16px;
+  width: 16px;
+  max-width: 16px;
+  flex: 0 0 16px;
+  overflow: hidden;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 50%;
+  background-color: rgba(207, 181, 240, 1);
+}
+
+.span_networkName {
+  box-sizing: border-box;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 4px;
+  margin-left: 10px;
+  margin-right: auto;
+  /* 居中显示 */
+}
+
+.span_arrowDown{
+  mask-image: url("../../public/icons/down-arrow.svg");
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-left: auto;
+}
+
+.button_Logo{
+  box-sizing: border-box;
+  height: 38px;
+  width: 46px;
+  outline: none;
+  cursor: pointer;
+  background-color: rgba(255, 140, 0, 0.7);
+}
+
+/* 内容 */
+.div_content{
+  margin-top: 30px;
+  width: 357px;
+  height: 436px;
+}
+
+.div_mainContent {
+  width: 357px;
+  height: 436px;
+  text-align: center;
+}
+
+.div_anime{
+  box-sizing: border-box;
+  margin: 0 auto;
+  height: 124px;
+  width: 120px;
+  margin-top: 24px;
+  background-color: rgba(255, 140, 0, 0.7);
+  color:rgba(255, 255, 255, 1);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.h1_welcomeBack{
+  height: 45px;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 357px;
+  font-size: 32px;
+  line-height: 45px;
+  color: rgba(214 ,217, 220, 1);
+  text-align: center;
+  vertical-align: baseline;
+  font-weight: 800;
+}
+
+.h3_description{
+  height: 31px;
+  margin: 0 auto;
+  width: 357px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: rgba(214 ,217, 220, 1);
+}
+
+.form_password{
+  display: block;
+  margin: 0 auto;
+  height: 48px;
+  width: 297px;
+  margin-top: 56px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+}
+
+.div_password{
+  position: relative;
+  display: inline-flex;
+  height: 48px;
+  width: 297px;
+  font-size: 16px;
+  vertical-align: top;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+.label_password {
+  position: absolute;
+  box-sizing: border-box;
+  display: block;
+  height: 16px;
+  width: 33px;
+  font-size: 16px;
+  line-height: 16px;
+  left: 0;
+  transform: translateY(8px);
+  transition: all 0.5s ease;
+}
+
+.input_password:focus~.label_password,
+.input_password:not(:placeholder-shown)~.label_password {
+  transform: translateY(-16px) scale(0.7);
+  /* 向上移动并缩小 */
+}
+
+.div_passwordChange{
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  height: 32px;
+  width: 297px;
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 19px;
+  vertical-align: baseline;
+  cursor: text;
+}
+
+.input_password {
+  box-sizing: content-box;
+  display: block;
+  height: 19px;
+  padding-bottom: 7px;
+  padding-top: 6px;
+  width: 297px;
+  line-height: 19px;
+  text-align: start;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(52, 52, 52, 1);
+  box-shadow: none;
+  outline: none;
+  border: none;
+  /* 移除所有边框 */
+  border-bottom: 1px solid rgba(214, 217, 220, 1);
+  /* 添加单条下边界 */
+  transition: border-color 0.5s ease;
+}
+
+.input_password:focus{
+  border-color: rgba(3, 118, 201, 1);
+}
+
+.button_logIn {
+  margin: 0 auto;
+  text-align: center;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  align-items: center;
+  /* 垂直方向居中对齐 */
+  display: flex;
+  justify-content: center;
+  /* 水平方向居中对齐 */
+  height: 45px;
+  width: 297px;
+  padding: 12px 16px;
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(3, 118, 201, 1);
+  border-radius: 100px;
+}
+
+.div_forgetPasswor{
+  text-align: center;
+  margin: 0 auto;
+  height: 41px;
+  width: 297px;
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.a_forgetPassword{
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 41;
+  width: auto;
+  padding: 12px 16px;
+  font-size: 12px;
+  color: rgba(3, 118, 201, 1);
+  cursor: pointer;
+}
+
+/* 页脚 */
+.div_footer {
+  display: flex;
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+  margin-top: 20px;
+  width: 357px;
+  height: auto;
+}
+
+.span_needHelp{
+  font-size: 12px;
+  color: rgba(214, 217, 220, 1);
+}
+
+.a_contact{
+  margin-left: 2px;
+  font-size: 12px;
+  color: rgba(3, 118, 201, 1);
+  cursor: pointer;
+}

@@ -1,0 +1,224 @@
+.container {
+  width: 357px;
+  height: 600px;
+  background-color: rgba(52, 52, 52, 1);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* 头部 */
+.div_header {
+  width: 357px;
+  height: 64px;
+  display: flex;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 10px rgba(40, 40, 40, 1);
+  /* 0px 水平偏移，5px 垂直偏移，10px 模糊半径，颜色值 */
+}
+
+.div_headerContent {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  /* 列宽自动分配 */
+  align-items: center;
+  column-gap: 8px;
+  padding: 8px;
+  font-size: 16px;
+  height: 64px;
+  width: 357px;
+}
+
+.div_select_network {
+  display: block;
+  width: 64px;
+  /* 或者设置一个适当的宽度 */
+  height: 32px;
+  line-height: 32px;
+  /* 其他样式属性 */
+}
+
+.button_network {
+  box-sizing: border-box;
+  border-style: none;
+  width: 64px;
+  height: 32px;
+  line-height: 32px;
+  background-color: rgba(30, 30, 30, 1);
+  color: rgba(255, 255, 255, 1);
+  border-radius: 9999px;
+  padding-left: 8px;
+  padding-right: 16px;
+  padding-block: 1px;
+  padding-inline: 6px;
+  border-width: 2px;
+  display: flex;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button_network:active {
+  background-color: rgba(60, 60, 60, 1);
+}
+
+.network_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.div_firstLetter {
+  padding-top: 2px;
+  margin-top: 5px;
+  border-style: solid;
+  border-width: 1px;
+  line-height: 16px;
+  height: 16px;
+  width: 16px;
+  max-width: 16px;
+  flex: 0 0 16px;
+  overflow: hidden;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 50%;
+  background-color: rgba(207, 181, 240, 1);
+}
+
+.span_arrowDown {
+  mask-image: url("../../public/icons/down-arrow.svg");
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-left: auto;
+}
+
+.button_account {
+  width: 154px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(52, 52, 52, 1);
+  outline: none;
+  border: none;
+}
+
+.button_account:hover{
+  background-color: rgba(60, 60, 60, 1);
+  cursor: pointer;
+}
+
+.button_logOut{
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 1);
+  margin-left: auto;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.div_content{
+  width: 357px;
+  height: 536px;
+  text-align: center;
+  justify-content: center;
+}
+
+.div_address{
+  margin: 0 auto;
+  width: 150px;
+  height: 32px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.button_address{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0 16px;
+  width: 150px;
+  max-width: 150px;
+  height: 32px;
+  line-height: 20px;
+  font-size: 12px;
+  color: rgb(16, 152, 252);
+  background-color: #1098fc26;
+  outline: none;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.div_balance {
+  width: 357px;
+  height: 45px;
+  box-sizing: border-box;
+  margin: 16px auto;
+  padding: 0 16px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 32px;
+}
+
+.span_balance {
+  height: 45px;
+  width: 76px;
+  text-overflow: ellipsis;
+}
+
+.span_tokenName {
+  height: 45px;
+  width: 172px;
+  text-overflow: ellipsis;
+}
+
+.div_buttons{
+  display: flex;
+  flex-direction: row;
+  height: 68px;
+  width: 240px;
+  margin: 24px auto;
+}
+
+.button_class{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  height: 70px;
+  padding: 1px 6px;
+  box-sizing: border-box;
+  text-align: center;
+  outline: none;
+  border: none;
+  color: rgb(16, 152, 252);
+  background-color: unset;
+}
+
+.div_buttonClass{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  width: 36px;
+  background-color: rgb(16, 152, 252);
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.p_description{
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 1);
+  line-height: 20px;
+  height: 20px;
+  width: 24px;
+  text-align: 20px;
+}

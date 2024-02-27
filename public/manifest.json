@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "OrangeWallet",
+  "short_name": "O-W",
+  "version": "0.0.1",
+  "description": "一个web3钱包插件的小练习",
+  "icons": {
+    "16": "/icons/icon16.png",
+    "32": "/icons/icon32.png",
+    "48": "/icons/icon48.png",
+    "192": "/icons/icon192.png"
+  },
+  "permissions": ["storage","window"],
+  "web_accessible_resources": [
+    {
+      "resources": ["index.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "background": [
+    {
+      "js": ["/script/background.js"],
+      "persistent": false
+    }
+  ],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "index.html"
+  }
+}
