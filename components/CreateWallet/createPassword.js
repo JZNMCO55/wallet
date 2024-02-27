@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "./createWallet.module.css";
-import Phrase from "./phrase";
-import WalletManager from "../../src/WalletManager";
+import walletManagerInstance from "../../src/WalletManager";
 
 export default function CreatePassword({ navigateToContent }) {
   const [isDisable, setDisable] = useState(true);
@@ -13,10 +12,9 @@ export default function CreatePassword({ navigateToContent }) {
   const handleNext = (event) => {
     event.preventDefault(); // 阻止表单默认提交行为
     if (isLegue && isEqua) {
-      const manager = new WalletManager();
       console.log("handle next newPassword", newPassword);
-      manager.SetPassword(newPassword);
-      manager
+      walletManagerInstance.SetPassword(newPassword);
+      walletManagerInstance
         .CreateAccount()
         .then((mnemonic) => {
           if (mnemonic) {
@@ -34,7 +32,6 @@ export default function CreatePassword({ navigateToContent }) {
   const handleNewPasswordChange = (event) => {
     const newPasswordValue = event.target.value;
     setNewPassword(newPasswordValue);
-    console.log("newPasswordLength: ", newPassword.length);
     // 直接使用newPassword会没及时刷新
     if (newPasswordValue.length < 8) {
       setIsLegue(false);
@@ -47,8 +44,6 @@ export default function CreatePassword({ navigateToContent }) {
     const confirmPasswordValue = event.target.value;
     setConfirmPassword(confirmPasswordValue);
 
-    console.log("newPassword: ", newPassword);
-    console.log("confirmPassword: ", confirmPassword);
     if (newPassword !== confirmPasswordValue) {
       setIsEqua(false);
     } else {

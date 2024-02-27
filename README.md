@@ -23,29 +23,36 @@
 
 ## 安装
 
+```bash
 $ git clone https://github.com/JZNMCO55/wallet.git
 $ cd wallet
 $ npm install
+```
 
 ## 使用示例
 
+1. 构建项目：
+
+```bash
 npm run build
+```
 
-输出静态文件。
+2. 打开谷歌浏览器或 Edge 浏览器，输入 edge://extensions 或 chrome://extension, 点击加载解压缩的扩展。然后加载 out 目录，点击插件图标开始使用。
+   ![alt text](image.png)
+   然后加载 out 目录
 
-打开谷歌浏览器或 Edge 浏览器，输入 edge://extensions 或 chrome://extension,
-点击加载解压缩的扩展：
-![alt text](image.png)
-然后加载 out 目录
+3.点击插件：
 
-点击插件：
 ![alt text](image-1.png)
 
-开始界面：
+4.开始界面：
+
 ![alt text](image-2.png)
+
 ps:中间的动图未来迭代的时候会去做，因为觉得还挺有趣的，目前先暂时用一块颜料挡着~
 
 创建钱包：
+
 ![alt text](image-3.png)
 
 ![alt text](image-4.png)
@@ -53,14 +60,17 @@ ps:中间的动图未来迭代的时候会去做，因为觉得还挺有趣的�
 ![alt text](image-5.png)
 
 导入钱包：
+
 ![alt text](image-6.png)
 ps:可以将助记词复制到任意一个输入框中，但目前只支持 12 助记词的钱包
 
 主页面:
+
 ![alt text](image-7.png)
 ps:目前主页面的功能尚未完成
 
 登录页面:
+
 ![alt text](image-8.png)
 
 ## 许可证
